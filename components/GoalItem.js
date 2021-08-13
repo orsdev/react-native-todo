@@ -1,13 +1,21 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text } from 'react-native';
 
-const GoalItem = ({ goalsList }) => {
+const GoalItem = ({ goalsList, getGoalId }) => {
   return (
     <FlatList
       keyExtractor={(item) => item.id}
       data={goalsList}
       renderItem={(data) => {
-        return <Text style={styles.listItem}>{data.item.value}</Text>;
+        return (
+          <Text
+            style={styles.listItem}
+            onPress={() => {
+              getGoalId(data.item.id);
+            }}>
+            {data.item.value}
+          </Text>
+        );
       }}
     />
   );

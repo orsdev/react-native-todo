@@ -18,13 +18,19 @@ export default function App() {
     ]);
   };
 
+  const deleteGoals = (id) => {
+    const filterGoal = goalsList.filter((item) => item.id !== id);
+
+    setGoalsList(filterGoal);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.containerInner}>
         <GoalInput goal={goal} handleOnChange={handleOnChange} />
         <Button title="ADD" onPress={addGoalHandler} />
       </View>
-      <GoalItem goalsList={goalsList} />
+      <GoalItem goalsList={goalsList} getGoalId={deleteGoals} />
     </View>
   );
 }
