@@ -4,7 +4,7 @@ import { TextInput, StyleSheet } from 'react-native';
 const GoalInput = ({ handleOnChange, goal }) => {
   return (
     <TextInput
-      placeholder="Enter your goals"
+      placeholder="Enter a goal"
       style={styles.input}
       onChangeText={handleOnChange}
       value={goal}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text } from 'react-native';
+import { FlatList, StyleSheet, Text} from 'react-native';
 
 const GoalItem = ({ goalsList, getGoalId }) => {
   return (

@@ -20,7 +20,6 @@ export default function App() {
 
   const deleteGoals = (id) => {
     const filterGoal = goalsList.filter((item) => item.id !== id);
-
     setGoalsList(filterGoal);
   };
 
